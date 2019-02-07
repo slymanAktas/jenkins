@@ -1,0 +1,8 @@
+Started by user [8mha:////4HUQuz2wbMpnI0hpbON6qxie1oUwAG9j0Yy6dI2V3txxAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgZB/dLi1CL94pzK3MS8xOySxGIAjIJQTMYAAAA=[0mSüleyman Aktaş
+Building in workspace /var/jenkins_home/workspace/my-first-job
+[my-first-job] $ /bin/sh -xe /tmp/jenkins6922162547622976113.sh
++ NAME=süleyman
++ date
++ echo Hello . Current date and time is Thu Feb  7 12:57:59 UTC 2019.
+Hello . Current date and time is Thu Feb  7 12:57:59 UTC 2019.
+Finished: SUCCESS

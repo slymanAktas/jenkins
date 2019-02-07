@@ -1,0 +1,63 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>FIRST_NAME</name>
+          <description>İlk ismi seç</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>Süleyman</string>
+              <string>Selime</string>
+              <string>Utku</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>LAST_NAME</name>
+          <description>ikinci ismi seç</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>Aktaş</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>SHOW</name>
+          <description>isim görüntülensin</description>
+          <defaultValue>true</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#NAME=suleyman
+#echo &quot;Hello ${NAME}. Current date and time is $(date).&quot;
+
+#/tmp/script1.sh Süleyman Aktaş
+
+#NAME=Süleyman
+#LASTNAME=Aktaş
+#/tmp/script1.sh $NAME $LASTNAME
+
+#/tmp/script1.sh $FIRST_NAME $LAST_NAME 
+
+/tmp/script2.sh $FIRST_NAME $LAST_NAME $SHOW
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

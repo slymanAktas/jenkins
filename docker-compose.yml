@@ -1,0 +1,22 @@
+version: '3'
+services:
+ jenkins:
+  container_name: jenkins
+  image: jenkins/jenkins
+  ports:
+   - "8181:8080"
+# everything within directory of container(/var/jenkins_home),
+#  copy then paste to host machine($PWD/jenkins_home)
+  volumes:
+   - "$PWD/jenkins_home:/var/jenkins_home"
+  networks:
+   - net
+ remote_host:
+  container_name: remote_host
+  image: remote_host #give a name to image.it is mandatory
+  build:
+   context: centos7
+  networks:
+   - net
+networks:
+ net:
